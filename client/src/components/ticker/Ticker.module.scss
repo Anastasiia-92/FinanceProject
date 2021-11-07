@@ -1,0 +1,83 @@
+@import '../commonStyles/mixins';
+
+
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #c2c2c2;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
+  .tickerIconWrap {
+    width: 80px;
+    display: flex;
+    justify-content: flex-start;
+
+    .tickerIcon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      padding: 3px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 12px;
+      color: white;
+      background-color: #426a9a;
+    }
+  }
+
+  .tickerName {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 200px;
+    max-width: 200px;
+    text-align: center;
+  }
+
+  .tickerElem {
+    min-width: 70px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .tickerProfPrice {
+    color: #489548;
+  }
+
+  .tickerLossPrice {
+    color: #c74949;
+  }
+
+  .PercentBlock {
+    width: 80px;
+    display: flex;
+    justify-content: flex-end;
+
+
+    .tickerProfPercent {
+      @include tickerPercentWrap(#376a37, #91de91);
+    }
+
+    .tickerProfPercent:before {
+      @include tickerPercentIcon("../commonStyles/image/double-arrow-top.svg")
+    }
+
+    .tickerLossPercent {
+      @include tickerPercentWrap(#8b4141, #ee8787);
+    }
+
+    .tickerLossPercent:before {
+      @include tickerPercentIcon("../commonStyles/image/double-arrow-bottom.svg")
+    }
+  }
+
+
+}
+
+
+

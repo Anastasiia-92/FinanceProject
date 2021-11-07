@@ -1,0 +1,23 @@
+@mixin tickerPercentWrap($textColor, $bcgrndColor) {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  color: $textColor;
+  background-color: $bcgrndColor;
+};
+
+@mixin tickerPercentIcon($imgUrl) {
+  display: block;
+  position: absolute;
+  content: "";
+  background-image: url($imgUrl);
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  top: 9px;
+  left: 7px;
+  height: 12px;
+  width: 12px;
+  opacity: 0.3;
+}
+
